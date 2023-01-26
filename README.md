@@ -10,7 +10,7 @@ Fully didactic purposes for the [Fiap MBI course](https://www.fiap.com.br/)
 
 | Iphone 13 Mini | Pixel 3 | Chrome |
 | ---- | ---- |  ---- |
-| ![.](readme/iphone.13.mini.png) | ![.](readme/pixel.3.png) | ![.](readme/chrome.png)
+| ![.](img/iphone.13.mini.png) | ![.](img/pixel.3.png) | ![.](img/chrome.png)
 
 ## Getting Started
 1. Clone project ```git@github.com:DaniloP85/find-Gifs.git``` or  ```https://github.com/DaniloP85/find-Gifs```
