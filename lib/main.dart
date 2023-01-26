@@ -31,12 +31,13 @@ class MyHomePage extends StatelessWidget {
         child: Row(
           children: <Widget>[
             Expanded(
+              flex: 1,
               child: Container(
                 decoration: const BoxDecoration(color: Colors.red),
               ),
-              flex: 1,
             ),
             Expanded(
+              flex: 2,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -56,13 +57,12 @@ class MyHomePage extends StatelessWidget {
                     ),
                   ]
               ),
-              flex: 2,
             ),
             Expanded(
+              flex: 1,
               child: Container(
                 decoration: const BoxDecoration(color: Colors.blue),
               ),
-              flex: 1,
             ),
           ],
         ),
