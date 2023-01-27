@@ -15,7 +15,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(),
@@ -45,15 +44,21 @@ class MyHomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Text(
                   'Danilo Santos',
-                  style: GoogleFonts.pacifico(
+                  style: GoogleFonts.ubuntu(
                     fontSize: 18,
                     color: Colors.white,
                     fontWeight: FontWeight.bold
                   ),
                 ),
               ),
-              MyButton(icon: Icons.phone, text: '+55 11 9 8956-3173'),
-              MyButton(icon: Icons.email, text: 'danilopsnts@gmail.com'),
+              MyButton(
+                  icon: Icons.phone,
+                  text: '+55 11 9 8956-3173',
+                  onPressed:() => { print('Clicou no phone')} ),
+              MyButton(
+                  icon: Icons.email,
+                  text: 'danilopsnts@gmail.com',
+                  onPressed:() => { print('Clicou no email')} ),
             ],
           ),
         ),
@@ -63,10 +68,17 @@ class MyHomePage extends StatelessWidget {
 }
 
 class MyButton extends StatelessWidget{
-  const MyButton({super.key, required this.icon, required this.text});
+  const MyButton({
+    super.key,
+    required this.icon,
+    required this.text,
+    this.onPressed,
+  });
 
   final IconData icon;
   final String text;
+
+  final Function()? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -77,9 +89,9 @@ class MyButton extends StatelessWidget{
         elevation: 4,
         color: Colors.white,
         child: ListTile(
-          onTap: (){},
+          onTap: onPressed,
           leading: Icon(icon, color: Colors.blueAccent,),
-          title: Text(text, style: GoogleFonts.pacifico(
+          title: Text(text, style: GoogleFonts.ubuntu(
               color: Colors.blueAccent
           )),
         ),
