@@ -1,7 +1,7 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import 'MyButton.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Danilo Santos',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -33,8 +33,8 @@ class MyHomePage extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: CircleAvatar(
                   radius: 150,
                   backgroundImage: NetworkImage('https://miro.medium.com/max/1400/0*vowtRZE_wvyVA7CB'),
@@ -53,7 +53,7 @@ class MyHomePage extends StatelessWidget {
               ),
               MyButton(
                   icon: Icons.phone,
-                  text: '+55 11 9 8956-3173',
+                  text: '+55 11 9 8956-3174',
                   onPressed:() => { print('Clicou no phone')} ),
               MyButton(
                   icon: Icons.email,
@@ -67,35 +67,4 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
-class MyButton extends StatelessWidget{
-  const MyButton({
-    super.key,
-    required this.icon,
-    required this.text,
-    this.onPressed,
-  });
 
-  final IconData icon;
-  final String text;
-
-  final Function()? onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-      child: Material(
-        borderRadius: BorderRadius.circular(16),
-        elevation: 4,
-        color: Colors.white,
-        child: ListTile(
-          onTap: onPressed,
-          leading: Icon(icon, color: Colors.blueAccent,),
-          title: Text(text, style: GoogleFonts.ubuntu(
-              color: Colors.blueAccent
-          )),
-        ),
-      ),
-    );
-  }
-}
