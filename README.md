@@ -1,4 +1,4 @@
-# Aula 2 - Material
+# Class 2
 
 ## Description
 
