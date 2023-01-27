@@ -34,12 +34,15 @@ class MyHomePage extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              CircleAvatar(
-                radius: 150,
-                backgroundImage: NetworkImage('https://miro.medium.com/max/1400/0*vowtRZE_wvyVA7CB'),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                child: CircleAvatar(
+                  radius: 150,
+                  backgroundImage: NetworkImage('https://miro.medium.com/max/1400/0*vowtRZE_wvyVA7CB'),
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 28.0),
+                padding: const EdgeInsets.symmetric(vertical: 16.0),
                 child: Text(
                   'Danilo Santos',
                   style: GoogleFonts.pacifico(
@@ -49,22 +52,36 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 16),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16),
-                child: Material(
-                  borderRadius: BorderRadius.circular(16),
-                  elevation: 4,
-                  color: Colors.blueAccent,
-                  child: ListTile(
-                    onTap: (){},
-                    leading: Icon(Icons.email, color: Colors.white,),
-                    title: Text('danilopsnts@gmail.com'),
-                  ),
-                ),
-              ),
+              MyButton(icon: Icons.phone, text: '+55 11 9 8956-3173'),
+              MyButton(icon: Icons.email, text: 'danilopsnts@gmail.com'),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class MyButton extends StatelessWidget{
+  const MyButton({super.key, required this.icon, required this.text});
+
+  final IconData icon;
+  final String text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+      child: Material(
+        borderRadius: BorderRadius.circular(16),
+        elevation: 4,
+        color: Colors.white,
+        child: ListTile(
+          onTap: (){},
+          leading: Icon(icon, color: Colors.blueAccent,),
+          title: Text(text, style: GoogleFonts.pacifico(
+              color: Colors.blueAccent
+          )),
         ),
       ),
     );

@@ -1,8 +1,8 @@
-# Aula 1 - Layout
+# Aula 2 - Material
 
 ## Description
 
-[Flutter Layout Cheat Sheet](https://medium.com/flutter-community/flutter-layout-cheat-sheet-5363348d037e)
+Working with fonts, Material's BorderRadius and ListTile.
 
 Fully didactic purposes for the [Fiap MBI course](https://www.fiap.com.br/)
 
