@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,43 +31,26 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.teal,
       body: SafeArea(
-        child: Row(
-          children: <Widget>[
-            Expanded(
-              flex: 1,
-              child: Container(
-                decoration: const BoxDecoration(color: Colors.red),
+        child: Center(
+          child: Column(
+            children: [
+              CircleAvatar(
+                radius: 150,
+                backgroundImage: NetworkImage('https://miro.medium.com/max/1400/0*vowtRZE_wvyVA7CB'),
               ),
-            ),
-            Expanded(
-              flex: 2,
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Center(
-                        child: Container(
-                          decoration: const BoxDecoration(color: Colors.yellow),
-                          height: 100,
-                          width: 100,
-                        ),
-                    ),
-                    Center(
-                          child: Container(
-                            decoration: const BoxDecoration(color: Colors.green),
-                            height: 100,
-                            width: 100,
-                          ),
-                    ),
-                  ]
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                child: Text(
+                  'Danilo Santos',
+                  style: GoogleFonts.pacifico(
+                    fontSize: 18,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
               ),
-            ),
-            Expanded(
-              flex: 1,
-              child: Container(
-                decoration: const BoxDecoration(color: Colors.blue),
-              ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
