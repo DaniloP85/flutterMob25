@@ -39,13 +39,27 @@ class MyHomePage extends StatelessWidget {
                 backgroundImage: NetworkImage('https://miro.medium.com/max/1400/0*vowtRZE_wvyVA7CB'),
               ),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 18.0),
+                padding: const EdgeInsets.symmetric(vertical: 28.0),
                 child: Text(
                   'Danilo Santos',
                   style: GoogleFonts.pacifico(
                     fontSize: 18,
                     color: Colors.white,
                     fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+              const SizedBox(height: 16),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Material(
+                  borderRadius: BorderRadius.circular(16),
+                  elevation: 4,
+                  color: Colors.blueAccent,
+                  child: ListTile(
+                    onTap: (){},
+                    leading: Icon(Icons.email, color: Colors.white,),
+                    title: Text('danilopsnts@gmail.com'),
                   ),
                 ),
               ),
