@@ -17,10 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      initialRoute: 'menu_screen',
+      initialRoute: MenuScreen.id,
       routes: {
-        'menu_screen': (context) => const MenuScreen(),
-        'personal_card_screen': (context) => const PersonalCardScreen(),
+        MenuScreen.id: (context) => const MenuScreen(),
+        PersonalCardScreen.id: (context) => const PersonalCardScreen(),
       },
     );
   }
