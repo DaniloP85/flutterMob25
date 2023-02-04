@@ -1,7 +1,6 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class DiceScreen extends StatefulWidget {
   static const String id = '/dice_screen';
@@ -16,13 +15,13 @@ class _DiceScreenState extends State<DiceScreen> {
   static const maxValue = 6;
   static final random = Random();
 
-  var randomNumber1 = random.nextInt(maxValue)+1;
-  var randomNumber2 = random.nextInt(maxValue)+1;
+  var randomNumber1 = random.nextInt(maxValue) + 1;
+  var randomNumber2 = random.nextInt(maxValue) + 1;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.teal,
       appBar: AppBar(),
       body: SafeArea(
         child: Padding(
@@ -32,18 +31,20 @@ class _DiceScreenState extends State<DiceScreen> {
               children: [
                 Expanded(
                     child: InkWell(
-                      onTap: (){
-                        setState((){
-                          randomNumber1 = random.nextInt(maxValue)+1;
-                        });
-                      },
-                        child: Image(image: AssetImage('assets/images/dice${randomNumber1.toString()}.png')))),
+                        onTap: () {
+                          setState(() {
+                            randomNumber1 = random.nextInt(maxValue) + 1;
+                          });
+                        },
+                        child: Image(
+                            image: AssetImage(
+                                'assets/images/dice${randomNumber1.toString()}.png')))),
                 SizedBox(width: 8),
                 Expanded(
                     child: InkWell(
                         onTap: () {
                           setState(() {
-                            randomNumber2 = random.nextInt(maxValue)+1;
+                            randomNumber2 = random.nextInt(maxValue) + 1;
                           });
                         },
                         child: Image(

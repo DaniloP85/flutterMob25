@@ -19,41 +19,48 @@ class MenuScreen extends StatelessWidget {
               style: GoogleFonts.ubuntu(fontSize: 26),
             ),
             SizedBox(height: 16, width: double.infinity),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, PersonalCardScreen.id);
-              },
-              child: Material(
-                color: Colors.teal,
-                borderRadius: BorderRadius.circular(1000),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  child: Text(
-                    'Cartão pessoal',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16),
-                  ),
-                ),
+            IntrinsicWidth(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, PersonalCardScreen.id);
+                      },
+                      child: Material(
+                        color: Colors.teal,
+                        borderRadius: BorderRadius.circular(1000),
+                        child: Padding(
+                          padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                          child: Text(
+                            'Cartão pessoal',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16, width: double.infinity),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pushNamed(context, DiceScreen.id);
+                      },
+                      child: Material(
+                        color: Colors.teal,
+                        borderRadius: BorderRadius.circular(1000),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 32),
+                          child: Text(
+                            'Desafio dos dados',
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16),
+                          ),
+                        ),
+                      ),
+                    )
+                  ]
               ),
             ),
-            SizedBox(height: 16, width: double.infinity),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, DiceScreen.id);
-              },
-              child: Material(
-                color: Colors.teal,
-                borderRadius: BorderRadius.circular(1000),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(vertical: 16, horizontal: 32),
-                  child: Text(
-                    'Desafio dos dados',
-                    textAlign: TextAlign.center,
-                    style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16),
-                  ),
-                ),
-              ),
-            )
           ],
         ),
       ),
