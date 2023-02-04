@@ -34,7 +34,7 @@ class _DiceScreenState extends State<DiceScreen> {
                     child: InkWell(
                       onTap: (){
                         setState((){
-                          randomNumber1 = random.nextInt(maxValue);
+                          randomNumber1 = random.nextInt(maxValue)+1;
                         });
                       },
                         child: Image(image: AssetImage('assets/images/dice${randomNumber1.toString()}.png')))),
@@ -43,7 +43,7 @@ class _DiceScreenState extends State<DiceScreen> {
                     child: InkWell(
                         onTap: () {
                           setState(() {
-                            randomNumber2 = random.nextInt(maxValue);
+                            randomNumber2 = random.nextInt(maxValue)+1;
                           });
                         },
                         child: Image(
