@@ -1,7 +1,8 @@
+import 'package:aula1/screen/Personal_card_screen.dart';
 import 'package:flutter/material.dart';
 
 class MenuScreen extends StatelessWidget {
-  static const String id = 'menu_screen';
+  static const String id = '/menu_screen';
   const MenuScreen({Key? key}) : super(key: key);
 
   @override
@@ -18,7 +19,7 @@ class MenuScreen extends StatelessWidget {
             SizedBox(height: 16, width: double.infinity),
             InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'personal_card_screen');
+                Navigator.pushNamed(context, PersonalCardScreen.id);
               },
               child: Material(
                 color: Colors.teal,
