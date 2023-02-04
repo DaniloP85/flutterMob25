@@ -1,5 +1,6 @@
 import 'package:aula1/screen/Dice_screen.dart';
 import 'package:aula1/screen/Personal_card_screen.dart';
+import 'package:aula1/screen/movies_screen.dart';
 import 'package:aula1/screen/quiz_screen.dart';
 import 'package:aula1/widgets/Rounded_button.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,8 @@ class MenuScreen extends StatelessWidget {
                     RoundedButton(id: DiceScreen.id, text: 'Desafio dos dados'),
                     SizedBox(height: 16, width: double.infinity),
                     RoundedButton(id: QuizScreen.id, text: 'Quiz'),
+                    SizedBox(height: 16, width: double.infinity),
+                    RoundedButton(id: MoviesScreen.id, text: 'Request'),
                   ]
               ),
             ),

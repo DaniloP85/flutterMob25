@@ -1,6 +1,7 @@
 import 'package:aula1/screen/Dice_screen.dart';
 import 'package:aula1/screen/Personal_card_screen.dart';
 import 'package:aula1/screen/finished_screen.dart';
+import 'package:aula1/screen/movies_screen.dart';
 import 'package:aula1/screen/quiz_screen.dart';
 import 'package:aula1/screen/menu_screen.dart';
 import 'package:flutter/material.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         PersonalCardScreen.id: (context) => const PersonalCardScreen(),
         DiceScreen.id: (context) => const DiceScreen(),
         QuizScreen.id: (context) => const QuizScreen(),
+        MoviesScreen.id: (context) => const MoviesScreen(),
         FinishedQuizScreen.id: (context) => FinishedQuizScreen(
             arguments: ModalRoute.of(context)?.settings.arguments
                 as FinishedQuizScreenArguments),

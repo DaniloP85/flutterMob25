@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class FinishedQuizScreen extends StatelessWidget {
   static const String id = '/finished_quiz';
@@ -13,10 +14,12 @@ class FinishedQuizScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Parabens!'),
+        title: Text('Parabens!',
+            style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16)),
       ),
       body: Center(
-        child: Text('Sua pontuação foi de ${arguments.score}'),
+        child: Text('Sua pontuação foi de ${arguments.score}',
+            style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16)),
       ),
     );
   }
