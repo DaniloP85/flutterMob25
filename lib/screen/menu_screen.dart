@@ -1,5 +1,6 @@
 import 'package:aula1/screen/Personal_card_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuScreen extends StatelessWidget {
   static const String id = '/menu_screen';
@@ -14,7 +15,7 @@ class MenuScreen extends StatelessWidget {
           children: [
             Text(
               'Menu inicial',
-              style: TextStyle(fontSize: 26),
+              style: GoogleFonts.ubuntu(fontSize: 26),
             ),
             SizedBox(height: 16, width: double.infinity),
             InkWell(
@@ -29,7 +30,7 @@ class MenuScreen extends StatelessWidget {
                   child: Text(
                     'Cartão pessoal',
                     textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white, fontSize: 16),
+                    style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16),
                   ),
                 ),
               ),

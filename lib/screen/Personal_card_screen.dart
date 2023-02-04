@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class PersonalCardScreen extends StatelessWidget {
   static const String id = '/personal_card_screen';
@@ -11,7 +12,7 @@ class PersonalCardScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SafeArea(
         child: Center(
-          child: Text("data"),
+          child: Text("data",style: GoogleFonts.ubuntu(fontSize: 16),),
         ),
       ),
     );
