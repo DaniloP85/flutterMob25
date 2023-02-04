@@ -17,7 +17,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MenuScreen(),
+      initialRoute: 'menu_screen',
+      routes: {
+        'menu_screen': (context) => const MenuScreen(),
+        'personal_card_screen': (context) => const PersonalCardScreen(),
+      },
     );
   }
 }
