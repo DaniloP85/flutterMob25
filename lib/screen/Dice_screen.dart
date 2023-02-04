@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DiceScreen extends StatelessWidget {
+class DiceScreen extends StatefulWidget {
   static const String id = '/dice_screen';
 
   const DiceScreen({Key? key}) : super(key: key);
+
+  @override
+  State<DiceScreen> createState() => _DiceScreenState();
+}
+
+class _DiceScreenState extends State<DiceScreen> {
+  static const
 
   @override
   Widget build(BuildContext context) {
