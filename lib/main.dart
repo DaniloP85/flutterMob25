@@ -26,11 +26,9 @@ class MyApp extends StatelessWidget {
         DiceScreen.id: (context) => const DiceScreen(),
         QuizScreen.id: (context) => const QuizScreen(),
         FinishedQuizScreen.id: (context) => FinishedQuizScreen(
-            arguments: ModalRoute.of(context)?.settings.arguments as FinishedQuizScreenArguments
-        ),
+            arguments: ModalRoute.of(context)?.settings.arguments
+                as FinishedQuizScreenArguments),
       },
     );
   }
 }
-
-

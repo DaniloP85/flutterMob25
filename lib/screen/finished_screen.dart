@@ -16,9 +16,7 @@ class FinishedQuizScreen extends StatelessWidget {
         title: const Text('Parabens!'),
       ),
       body: Center(
-        child: Text(
-            'Sua pontuação foi de ${arguments.score}'
-        ),
+        child: Text('Sua pontuação foi de ${arguments.score}'),
       ),
     );
   }
@@ -26,5 +24,6 @@ class FinishedQuizScreen extends StatelessWidget {
 
 class FinishedQuizScreenArguments {
   FinishedQuizScreenArguments({required this.score});
+
   int score;
 }

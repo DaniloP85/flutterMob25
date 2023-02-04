@@ -2,12 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class RoundedButton extends StatelessWidget {
-
-  const RoundedButton({
-    super.key,
-    required this.id,
-    required this.text
-  });
+  const RoundedButton({super.key, required this.id, required this.text});
 
   final String id;
   final String text;

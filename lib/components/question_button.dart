@@ -2,12 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class QuestionButton extends StatelessWidget {
-
-  const QuestionButton({
-    super.key,
-    required this.onPressed,
-    required this.text
-  });
+  const QuestionButton(
+      {super.key, required this.onPressed, required this.text});
 
   final VoidCallback onPressed;
   final String text;

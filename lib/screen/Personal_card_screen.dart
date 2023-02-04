@@ -12,7 +12,10 @@ class PersonalCardScreen extends StatelessWidget {
       appBar: AppBar(),
       body: SafeArea(
         child: Center(
-          child: Text("data",style: GoogleFonts.ubuntu(fontSize: 16),),
+          child: Text(
+            "data",
+            style: GoogleFonts.ubuntu(fontSize: 16),
+          ),
         ),
       ),
     );
