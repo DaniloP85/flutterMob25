@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'MyButton.dart';
+import 'widget/Card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,14 +51,16 @@ class MyHomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              MyButton(
+              MyCard(
                   icon: Icons.phone,
                   text: '+55 11 9 8956-3174',
-                  onPressed:() => { print('Clicou no phone')} ),
-              MyButton(
+                  onPressed:() => { print('Clicou no phone')}
+              ),
+              MyCard(
                   icon: Icons.email,
                   text: 'danilopsnts@gmail.com',
-                  onPressed:() => { print('Clicou no email')} ),
+                  onPressed:() => { print('Clicou no email')}
+              ),
             ],
           ),
         ),

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class MyButton extends StatelessWidget{
-  const MyButton({
+class MyCard extends StatelessWidget{
+  const MyCard({
     super.key,
     required this.icon,
     required this.text,
