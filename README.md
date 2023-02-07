@@ -10,7 +10,7 @@ Fully didactic purposes for the [Fiap MBI course](https://www.fiap.com.br/)
 
 | Iphone 13 Mini | Pixel 3 | Chrome |
 | ---- | ---- |  ---- |
-| ![.](img/iphone.13.mini.gif) | ![.](img/pixel.png) | ![.](img/chrome.png)
+| ![.](img/iphone.13.mini.gif) | ![.](img/pixel.gif) | ![.](img/chrome.gif)
 
 ## Authors
 
