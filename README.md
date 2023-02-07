@@ -1,9 +1,6 @@
-# Class 3
+# Fiap MBI course
 
-In this class I learned about:
-- https requests;
-- Passing parameters to a route;
-- Transferring information between screens;
+Introduction to Flutterween screens;
 
 ## Description
 
