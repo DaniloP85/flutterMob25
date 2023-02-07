@@ -1,8 +1,11 @@
 # Class 3
 
-## Description
+In this class I learned about:
+- https requests;
+- Passing parameters to a route;
+- Transferring information between screens;
 
-learning about routes, working with random values and screen state control
+## Description
 
 Fully didactic purposes for the [Fiap MBI course](https://www.fiap.com.br/)
 
