@@ -12,14 +12,26 @@ class FinishedQuizScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('ok ${arguments.score}');
     return Scaffold(
       appBar: AppBar(
         title: Text('Parabens!',
             style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16)),
       ),
       body: Center(
-        child: Text('Sua pontuação foi de ${arguments.score}',
-            style: GoogleFonts.ubuntu(color: Colors.white, fontSize: 16)),
+        child: Column(
+          children: [
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 16.0),
+              child: CircleAvatar(
+                radius: 150,
+                backgroundImage: NetworkImage('https://media1.giphy.com/media/BPJmthQ3YRwD6QqcVD/giphy.gif'),
+              ),
+            ),
+            Text('Sua pontuação foi de ${arguments.score}',
+                style: GoogleFonts.ubuntu(color: Colors.black, fontSize: 16)),
+          ],
+        ),
       ),
     );
   }
