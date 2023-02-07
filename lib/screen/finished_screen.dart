@@ -12,7 +12,6 @@ class FinishedQuizScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print('ok ${arguments.score}');
     return Scaffold(
       appBar: AppBar(
         title: Text('Parabens!',
