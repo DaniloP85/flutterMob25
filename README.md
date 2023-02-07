@@ -1,6 +1,6 @@
 # Fiap MBI course 
 
-Introduction to Flutterween screens;
+Introduction to Flutter;
 
 ## Description
 
