@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../components/question_button.dart';
 import '../widgets/my_textfield.dart';
@@ -21,8 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(
-              mainAxisAlignment: MainAxisAlignment.center, children: [
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             MyTextField(
               keyboardType: TextInputType.emailAddress,
               labelText: 'e-mail',
@@ -68,6 +68,32 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void authenticateUser() {
-    Navigator.pushNamed(context, MenuScreen.id);
+    final firebaseAuth = FirebaseAuth.instance;
+
+    firebaseAuth
+        .signInWithEmailAndPassword(
+      email: email,
+      password: password,
+    )
+        .then((userCredential) {
+      Navigator.pushNamed(context, MenuScreen.id);
+    }).onError((error, stackTrace) {
+      firebaseAuth
+          .createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      )
+          .then(
+        (value) {
+          Navigator.pushNamed(context, MenuScreen.id);
+        },
+      ).onError((error, stackTrace) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(error.toString()),
+          ),
+        );
+      });
+    });
   }
 }
