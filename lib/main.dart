@@ -1,6 +1,7 @@
 import 'package:aula1/screen/Dice_screen.dart';
 import 'package:aula1/screen/Personal_card_screen.dart';
 import 'package:aula1/screen/finished_screen.dart';
+import 'package:aula1/screen/login_screen.dart';
 import 'package:aula1/screen/movies_screen.dart';
 import 'package:aula1/screen/quiz_screen.dart';
 import 'package:aula1/screen/menu_screen.dart';
@@ -20,8 +21,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      initialRoute: MenuScreen.id,
+      initialRoute: LoginScreen.id,
       routes: {
+        LoginScreen.id: (context) => LoginScreen(),
         MenuScreen.id: (context) => const MenuScreen(),
         PersonalCardScreen.id: (context) => const PersonalCardScreen(),
         DiceScreen.id: (context) => const DiceScreen(),
