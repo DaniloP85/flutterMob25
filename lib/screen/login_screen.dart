@@ -21,7 +21,8 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center, children: [
             MyTextField(
               keyboardType: TextInputType.emailAddress,
               labelText: 'e-mail',

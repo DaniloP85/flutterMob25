@@ -15,29 +15,32 @@ class MenuScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(),
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Menu inicial',
-              style: GoogleFonts.ubuntu(fontSize: 26),
-            ),
-            SizedBox(height: 16, width: double.infinity),
-            IntrinsicWidth(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: const [
-                    RoundedButton(id:PersonalCardScreen.id, text: 'Cartão pessoal'),
-                    SizedBox(height: 16, width: double.infinity),
-                    RoundedButton(id: DiceScreen.id, text: 'Desafio dos dados'),
-                    SizedBox(height: 16, width: double.infinity),
-                    RoundedButton(id: QuizScreen.id, text: 'Quiz'),
-                    SizedBox(height: 16, width: double.infinity),
-                    RoundedButton(id: MoviesScreen.id, text: 'Request'),
-                  ]
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Menu inicial',
+                style: GoogleFonts.ubuntu(fontSize: 26),
               ),
-            ),
-          ],
+              SizedBox(height: 16, width: double.infinity),
+              IntrinsicWidth(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: const [
+                      RoundedButton(id:PersonalCardScreen.id, text: 'Cartão pessoal'),
+                      SizedBox(height: 16, width: double.infinity),
+                      RoundedButton(id: DiceScreen.id, text: 'Desafio dos dados'),
+                      SizedBox(height: 16, width: double.infinity),
+                      RoundedButton(id: QuizScreen.id, text: 'Quiz'),
+                      SizedBox(height: 16, width: double.infinity),
+                      RoundedButton(id: MoviesScreen.id, text: 'Request'),
+                    ]
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
